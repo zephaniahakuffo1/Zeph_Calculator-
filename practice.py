@@ -41,6 +41,8 @@ while True:
             print("Error:division by zero is not possible")
             continue
         result=num1/num2
+        break
+        print(result)
     else:
         print(f"Invalid operation , {operation}")
         continue
