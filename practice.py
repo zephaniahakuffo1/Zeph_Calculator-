@@ -17,33 +17,34 @@ while True :
         print("Invalid input. Please enter a valid number.")
 
 #Ask the user for the operation they want to perform
+while True:
 
-operation=input("Enter the operation you want to perform (+, -, *, /):")
+    operation=input("Enter the operation you want to perform (+, -, *, /):")
 
+    if operation == "+":
+        result=num1+num2
+        break
+        print(f"The result is : {result}")                      
 
-#perform the operations
-if operation == "+":
-    result=num1+num2
-    print(f"The result is : {result}")                      
+    elif operation == "-":
+        result=num1-num2
+        break
+        print(f"The result is : {result}")  
 
-elif operation == "-":
-    result=num1-num2
-    print(f"The result is : {result}")  
+    elif operation == "*":
+        result=num1*num2
+        break
+        print(f"The result is : {result}")  
 
-elif operation == "*":
-    result=num1*num2
-    print(f"The result is : {result}")  
+    elif operation == "/":
+        if num2==0:
+            print("Error:division by zero is not possible")
+            continue
+        result=num1/num2
+    else:
+        print(f"Invalid operation , {operation}")
+        continue
 
-elif operation == "/":
-    result = num1/num2
-    print(f"The result is : {result}")
-    if num2 == 0:
-        print("Error,division by 0 is not possible")
-elif operation != ("+" or "-"or"*"or "/" ):
-    print("Invalid operation.Please choose a valid operation.")
-else:
-    while True:
-        try:
-            print(operation)
-        except :
-            print("Invalid operation.Please choose a valid operation.")
+#Provide the results
+print(f"The result is: {result}")
+
