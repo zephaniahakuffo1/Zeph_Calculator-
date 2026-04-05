@@ -1,52 +1,80 @@
-print("         Welcome to Zeph's Calculator            ")        
+# # #get two numbers from the user
 
-#Ask the user for two valid inputs
+# def get_number(num1,num2):
+#     num1=float(input("Enter your first number : " ))
+#     num2=float(input("Enter your second number : "))
+# get_number("","")
+#  #let user choose operation
+# def get_operation():
+#     user_operation =input("Choose the operation you want to perform: + , - , * , / : ") 
 
-while True :
-    try:
-        num1=float(input("Enter your first number:"))
-        break
-    except ValueError:
-        print("Invalid input. Please enter a valid number.")
 
-while True :
-    try:
-        num2=float(input("Enter your second number:"))
-        break
-    except ValueError:
-        print("Invalid input. Please enter a valid number.")
+# #performing of operations
+# def add(num1, num2):
+#     return(num1,num2)
 
-#Ask the user for the operation they want to perform
-while True:
+# def subtract(num1,num2):
+#     return(num1,num2)
 
-    operation=input("Enter the operation you want to perform (+, -, *, /):")
+# def multiply(num1,num2):
+#     return(num1,num2)
 
+# def divide(num1,num2):
+#     return(num1,num2)
+
+# #Display a welcome message
+
+# print("Welcome to Zeph's Calculator".center(50))
+
+# while True:
+#     try:
+#         get_number()
+#         if num1 or num2 !=
+
+
+
+def get_number(prompt):
+    while True:
+        try:
+            number = float(input(prompt))
+            return number
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+
+def get_operation():
+    while True:
+        op = input("Enter operation (+, -, *, /): ")
+        if op in ["+", "-", "*", "/"]:
+            return op
+        else:
+            print("Invalid operation")
+
+
+def calculate(num1, num2, operation):
     if operation == "+":
-        result=num1+num2
-        break
-        print(f"The result is : {result}")                      
-
+        return num1 + num2
     elif operation == "-":
-        result=num1-num2
-        break
-        print(f"The result is : {result}")  
-
+        return num1 - num2
     elif operation == "*":
-        result=num1*num2
-        break
-        print(f"The result is : {result}")  
-
+        return num1 * num2
     elif operation == "/":
-        if num2==0:
-            print("Error:division by zero is not possible")
-            continue
-        result=num1/num2
-        break
-        print(result)
-    else:
-        print(f"Invalid operation , {operation}")
-        continue
+        if num2 == 0:
+            return "Error: division by zero"
+        return num1 / num2
 
-#Provide the results
-print(f"The result is: {result}")
+
+def main():
+    print("Welcome to Zeph's Calculator".center(70))
+
+    num1 = get_number("Enter your first number: ")
+    num2 = get_number("Enter your second number: ")
+
+    operation = get_operation()
+
+    result = calculate(num1, num2, operation)
+
+    print(f"The result is: {result}")
+
+main()
 
