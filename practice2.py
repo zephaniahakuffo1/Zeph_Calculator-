@@ -36,3 +36,10 @@
 
 
 # hello("chris")
+
+
+
+
+
+name=50,60,87
+print(name)
