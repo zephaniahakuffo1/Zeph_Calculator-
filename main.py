@@ -31,23 +31,33 @@ def calculate(num1,num2,operation):
              return num1*num2
          
          elif  operation == "/" :
-            if num2 == 0:
-                print("Error: division by zero")
-            
-         return num1/num2
+                if num2 == 0:
+                    print("Error: division by zero")
+
+                else:
+                     return num1/num2
+
+                
          
 
 def main():
-    print("Welcome to Zeph's Calculator".center(50))
-          
-    num1=get_number("Enter your first number : ")
-    num2=get_number("Enter your second number : ")
+    while True:
+        print("Welcome to Zeph's Calculator".center(50))
+              
+        num1=get_number("Enter your first number : ")
+        num2=get_number("Enter your second number : ")
 
-    operation=get_operation()
+        operation=get_operation()
 
-    result=calculate(num1,num2,operation)
+        result=calculate(num1,num2,operation)
 
-    print(f"The result is : {result}")
+        print(f"The result is : {result}")
+
+
+        continue_calculation = input("Do you want to perform another calculation? (yes/no): ").strip().lower()
+        if continue_calculation != "yes":
+            print("Thank you for using Zeph's Calculator. Goodbye!")
+            break
 
 
 
