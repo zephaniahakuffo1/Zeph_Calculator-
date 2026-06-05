@@ -1,38 +1,4 @@
-# # #get two numbers from the user
-
-# def get_number(num1,num2):
-#     num1=float(input("Enter your first number : " ))
-#     num2=float(input("Enter your second number : "))
-# get_number("","")
-#  #let user choose operation
-# def get_operation():
-#     user_operation =input("Choose the operation you want to perform: + , - , * , / : ") 
-
-
-# #performing of operations
-# def add(num1, num2):
-#     return(num1,num2)
-
-# def subtract(num1,num2):
-#     return(num1,num2)
-
-# def multiply(num1,num2):
-#     return(num1,num2)
-
-# def divide(num1,num2):
-#     return(num1,num2)
-
-# #Display a welcome message
-
-# print("Welcome to Zeph's Calculator".center(50))
-
-# while True:
-#     try:
-#         get_number()
-#         if num1 or num2 !=
-
-
-
+#function to get user number
 def get_number(prompt):
     while True:
         try:
@@ -41,7 +7,7 @@ def get_number(prompt):
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
-
+#function to get operation to use
 def get_operation():
     while True:
         op = input("Enter operation (+, -, *, /): ")
@@ -50,7 +16,7 @@ def get_operation():
         else:
             print("Invalid operation")
 
-
+#function to perform calculation
 def calculate(num1, num2, operation):
     if operation == "+":
         return num1 + num2
@@ -63,7 +29,7 @@ def calculate(num1, num2, operation):
             return "Error: division by zero"
         return num1 / num2
 
-
+#main function to run everything
 def main():
     print("Welcome to Zeph's Calculator".center(70))
 
@@ -77,4 +43,11 @@ def main():
     print(f"The result is: {result}")
 
 main()
+
+
+
+
+
+
+#redo of the calculator using  OOP  and adding more features
 

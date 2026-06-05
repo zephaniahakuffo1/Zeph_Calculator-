@@ -15,10 +15,11 @@ def get_operation():
             op=input("Enter operation ; , + , - , * , /  : " )
             if op in ["+", "-", "*", "/"]:
                 return op
+            
             else:
                 print("Invalid operation")
 
-#function to calculate
+#function to calculate 
  
 def calculate(num1,num2,operation):
          if operation=="+":
@@ -62,6 +63,13 @@ def main():
 
 
 main()
+
+
+
+
+
+
+
 
 
 
